@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Коммерческое предложение для Дастана Абуханова: сюжетные видео, обучающая платформа и сообщество.">
+<meta name="description" content="Коммерческое предложение для Дастана Абуханова: видео в 2D-анимации, обучающая платформа и сообщество.">
 <meta property="og:title" content="Знание, которое остаётся">
 <meta property="og:image" content="poster.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect x=%229%22 y=%224%22 width=%2214%22 height=%2224%22 rx=%221%22 fill=%22%234A2E1F%22/%3E%3Ccircle cx=%2219.5%22 cy=%2217%22 r=%221.6%22 fill=%22%23C9A266%22/%3E%3C/svg%3E">
@@ -117,8 +117,17 @@ h2.hand{font-size:clamp(46px,6.4vw,88px);text-wrap:balance}
 .design-note p{font-size:17px;max-width:62ch}
 
 /* sample video window */
-.sample{margin-top:clamp(56px,7vw,96px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px);align-items:center}
-.sample__text{display:grid;gap:14px;min-width:0}
+.sample{margin-top:clamp(56px,7vw,96px);display:grid;gap:clamp(28px,4vw,44px)}
+.sample__text{display:grid;gap:14px;min-width:0;max-width:640px}
+.sample__grid{display:grid;grid-template-columns:minmax(0,3.16fr) minmax(0,1fr);gap:22px;align-items:start}
+.sample__item{display:grid;gap:14px;margin:0;min-width:0}
+.sample__item figcaption{justify-self:start;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:999px;background:var(--brass);color:#2A1C14}
+.win--tall .win__screen{aspect-ratio:9/16}
+.win__screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#000}
+@media (max-width:900px){
+  .sample__grid{grid-template-columns:minmax(0,1fr);gap:34px}
+  .sample__item--tall{max-width:320px}
+}
 .sample__text h3{font-family:var(--f-hand);font-weight:400;font-size:clamp(38px,3.6vw,52px);line-height:1.08;text-wrap:balance}
 .sample__text p:not(.label){max-width:36ch}
 .sample__link{justify-self:start;font-weight:500;font-size:17px;color:var(--walnut);text-decoration:underline;text-underline-offset:4px}
@@ -311,9 +320,9 @@ h2.hand{font-size:clamp(46px,6.4vw,88px);text-wrap:balance}
       <ol class="steps" style="list-style:none;padding:0">
         <li class="step">
           <span class="step__n">1</span>
-          <span class="tag">Сюжетные видео</span>
+          <span class="tag">2D-анимация</span>
           <h3>Зацепить</h3>
-          <p>Ролики с историей, героем и развязкой. Их досматривают до конца, сохраняют и пересылают близким.</p>
+          <p>Анимированные ролики с историей и смыслом: аяты, хадисы и образы на экране. Их досматривают до конца, сохраняют и пересылают близким.</p>
         </li>
         <li class="step">
           <span class="step__n">2</span>
@@ -342,23 +351,27 @@ h2.hand{font-size:clamp(46px,6.4vw,88px);text-wrap:balance}
 
       <div class="sample">
         <div class="sample__text">
-          <p class="label">Пример</p>
-          <h3>Так выглядит сюжетное видео</h3>
-          <p>Этот ролик мы собрали просто для примера, чтобы вы увидели формат. Видео в проекте будут только лучше.</p>
-          <a class="sample__link" href="https://youtu.be/F6tj4Bsj3CQ" target="_blank" rel="noopener">Смотреть на YouTube ↗</a>
+          <p class="label">Примеры</p>
+          <h3>Так выглядят форматы</h3>
+          <p>Эти ролики — просто примеры, чтобы вы увидели формат. Видео в проекте будут только лучше.</p>
           <a class="sample__link" href="https://metaframe.ltd" target="_blank" rel="noopener">Другие наши работы — metaframe.ltd ↗</a>
         </div>
-        <a class="win" href="https://youtu.be/F6tj4Bsj3CQ" target="_blank" rel="noopener" aria-label="Смотреть пример сюжетного видео на YouTube">
+        <div class="sample__grid">
+        <figure class="sample__item">
+        <div class="win">
           <span class="win__bar" aria-hidden="true"><i></i><i></i><i></i><span class="win__url">youtu.be/F6tj4Bsj3CQ</span></span>
-          <span class="win__screen">
-            <span class="win__center">
-              <span class="win__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg></span>
-              <span class="win__title">Dastan · AI video</span>
-              <span class="win__tag">Пример · откроется на YouTube</span>
-            </span>
-            <span class="win__progress" aria-hidden="true"><b></b></span>
-          </span>
-        </a>
+          <span class="win__screen"><iframe src="https://www.youtube-nocookie.com/embed/F6tj4Bsj3CQ?rel=0&amp;playsinline=1" title="Пример видео на YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
+        </div>
+        <figcaption>Сюжетные</figcaption>
+        </figure>
+        <figure class="sample__item sample__item--tall">
+          <div class="win win--tall">
+            <span class="win__bar" aria-hidden="true"><i></i><i></i><i></i><span class="win__url">YouTube Shorts</span></span>
+            <span class="win__screen"><iframe src="https://www.youtube-nocookie.com/embed/ecopYRFocrE?rel=0&amp;playsinline=1" title="Пример видео на YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></span>
+          </div>
+          <figcaption>Без лица · 2D-анимация</figcaption>
+        </figure>
+        </div>
       </div>
     </div>
   </section>
@@ -370,7 +383,7 @@ h2.hand{font-size:clamp(46px,6.4vw,88px);text-wrap:balance}
           <p class="label" style="margin-bottom:12px">Этап 1 · Запуск</p>
           <h2 class="hand" id="packs-h">Три пути на старт</h2>
         </div>
-        <p>Запуск — это разработка: собираем систему, которая дальше работает сама. Обучающая платформа есть в каждом пакете. Отличаются количество сюжетных видео и то, что окружает учёбу.</p>
+        <p>Запуск — это разработка: собираем систему, которая дальше работает сама. Обучающая платформа есть в каждом пакете. Отличаются количество видео в 2D-анимации и то, что окружает учёбу.</p>
       </div>
 
       <div class="cards">
@@ -380,16 +393,16 @@ h2.hand{font-size:clamp(46px,6.4vw,88px);text-wrap:balance}
             <h3 class="card__name" id="p1">Путник</h3>
             <p class="card__tag">Запустить платформу и проверить, как аудитория идёт в учёбу.</p>
           </div>
-          <div class="card__count"><b>4</b><span>сюжетных<br>видео</span></div>
+          <div class="card__count"><b>4</b><span>видео<br>в 2D-анимации</span></div>
           <ul class="feat">
-            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>4 сюжетных видео</span></li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>4 видео в 2D-анимации</span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Обучающая платформа</span></li>
             <li class="no"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Воронки с автоответами</span><em class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">не входит</em></li>
             <li class="no"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Сообщество в Telegram</span><em class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">не входит</em></li>
             <li class="no"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Авторский дизайн платформы</span><em class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">не входит</em></li>
           </ul>
           <div class="card__price">
-            <span class="sum">1 000 000 ₸</span>
+            <span class="sum">800 000 ₸</span>
             <a class="btn btn--ghost" href="https://wa.me/77068257763?text=%D0%90%D1%81%D1%81%D0%B0%D0%BB%D1%8F%D0%BC%D1%83%20%D0%B0%D0%BB%D0%B5%D0%B9%D0%BA%D1%83%D0%BC!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%B5%D0%BD%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20%C2%AB%D0%9F%D1%83%D1%82%D0%BD%D0%B8%D0%BA%C2%BB" target="_blank" rel="noopener">Выбрать «Путник»</a>
           </div>
         </article>
@@ -400,16 +413,16 @@ h2.hand{font-size:clamp(46px,6.4vw,88px);text-wrap:balance}
             <h3 class="card__name" id="p2">Караван</h3>
             <p class="card__tag">Вести людей от ролика до ученика автоматически и держать их вместе.</p>
           </div>
-          <div class="card__count"><b>6</b><span>сюжетных<br>видео</span></div>
+          <div class="card__count"><b>6</b><span>видео<br>в 2D-анимации</span></div>
           <ul class="feat">
-            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>6 сюжетных видео</span></li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>6 видео в 2D-анимации</span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Обучающая платформа</span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Воронки с автоответами</span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Сообщество в Telegram</span></li>
             <li class="no"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Авторский дизайн платформы</span><em class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">не входит</em></li>
           </ul>
           <div class="card__price">
-            <span class="sum">1 200 000 ₸</span>
+            <span class="sum">1 000 000 ₸</span>
             <a class="btn btn--ghost" href="https://wa.me/77068257763?text=%D0%90%D1%81%D1%81%D0%B0%D0%BB%D1%8F%D0%BC%D1%83%20%D0%B0%D0%BB%D0%B5%D0%B9%D0%BA%D1%83%D0%BC!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%B5%D0%BD%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20%C2%AB%D0%9A%D0%B0%D1%80%D0%B0%D0%B2%D0%B0%D0%BD%C2%BB" target="_blank" rel="noopener">Выбрать «Караван»</a>
           </div>
         </article>
@@ -422,16 +435,16 @@ h2.hand{font-size:clamp(46px,6.4vw,88px);text-wrap:balance}
             <h3 class="card__name" id="p3">Оазис</h3>
             <p class="card__tag">Вся система целиком, в вашем собственном стиле.</p>
           </div>
-          <div class="card__count"><b>8</b><span>сюжетных<br>видео</span></div>
+          <div class="card__count"><b>8</b><span>видео<br>в 2D-анимации</span></div>
           <ul class="feat">
-            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>8 сюжетных видео</span></li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>8 видео в 2D-анимации</span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Обучающая платформа</span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Воронки с автоответами</span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Сообщество в Telegram</span></li>
             <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l4 4 8-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Авторский дизайн платформы</span></li>
           </ul>
           <div class="card__price">
-            <span class="sum">1 500 000 ₸</span>
+            <span class="sum">1 300 000 ₸</span>
             <a class="btn" href="https://wa.me/77068257763?text=%D0%90%D1%81%D1%81%D0%B0%D0%BB%D1%8F%D0%BC%D1%83%20%D0%B0%D0%BB%D0%B5%D0%B9%D0%BA%D1%83%D0%BC!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%B5%D0%BD%20%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%20%C2%AB%D0%9E%D0%B0%D0%B7%D0%B8%D1%81%C2%BB" target="_blank" rel="noopener">Выбрать «Оазис»</a>
           </div>
         </article>
@@ -463,13 +476,13 @@ h2.hand{font-size:clamp(46px,6.4vw,88px);text-wrap:balance}
             <span class="stop__dot" aria-hidden="true"></span>
             <span class="stop__when">Этап 1</span>
             <span class="stop__big">Запуск</span>
-            <p class="stop__txt">Выбираете пакет. Собираем платформу, воронки и сообщество, выходят первые сюжетные видео.</p>
+            <p class="stop__txt">Выбираете пакет. Собираем платформу, воронки и сообщество, выходят первые видео в 2D-анимации.</p>
           </li>
           <li class="stop" style="--y:64">
             <span class="stop__dot" aria-hidden="true"></span>
             <span class="stop__when">Этап 2</span>
             <span class="stop__big">Рост</span>
-            <p class="stop__txt">Разработка позади. Каждый месяц выходят новые сюжетные видео, а мы предлагаем нововведения.</p>
+            <p class="stop__txt">Разработка позади. Каждый месяц выходят новые видео в 2D-анимации, а мы предлагаем нововведения.</p>
           </li>
           <li class="stop stop--goal" style="--y:26">
             <span class="stop__dot" aria-hidden="true"></span>
